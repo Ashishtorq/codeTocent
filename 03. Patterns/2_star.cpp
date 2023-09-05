@@ -13,7 +13,8 @@ int main()
         int j = 1;
         while (j <= n) 
         {
-            cout << val;
+            // cout << val;
+            cout << i;
             j++;
         }
         i++;
