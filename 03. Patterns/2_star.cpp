@@ -17,7 +17,7 @@ int main()
             j++;
         }
         i++;
-        val++;
+        val++; // This value will get repeated 
         cout << endl;
     }
 
