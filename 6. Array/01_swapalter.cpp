@@ -3,10 +3,10 @@ using namespace std;
 
 int main()
 {
-    int arr[6] = {1, 2, 3, 4, 5, 6};
+    int arr[6] = {1, 2, 3, 4, 5};
     int i = 0;
     int j = i + 1;
-    while (j > 5)
+    while (j < 5)
     {
         int temp = arr[i];
         arr[i] = arr[j];
