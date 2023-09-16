@@ -3,9 +3,10 @@ using namespace std;
 int firstOccurace(int arr[], int n, int k){
     int s = 0;
     int e = n-1;
-    int mid = (s+e)/2;
+    // int mid = (s+e)/2;
     int ans = -1;
     while(s<=e){
+        int mid = (s+e)/2;
         if(arr[mid] == k){
             ans = mid;
             e = mid - 1;
@@ -14,7 +15,6 @@ int firstOccurace(int arr[], int n, int k){
             s = mid + 1;
         }
         else e = mid -1;
-        mid = (s+e)/2;
     }
     return ans;
 }
