@@ -36,10 +36,17 @@ int lastOccurace(int arr[], int n, int k){
     }
     return ans;
 }
+// int totalOccurance(int arr[], int n){
+    
+// }
 int main()
 {
     int arr[6] = {5,7,7,8,8,10};
-    cout<<"The first occurance is at index "<<firstOccurace(arr,6,8)<<endl;
-    cout<<"The last occurance is at index "<<lastOccurace(arr,6,8)<<endl;
+    int a = firstOccurace(arr,6,8);
+    int b = lastOccurace(arr,6,8);
+    int c = b-a+1;
+    cout<<a<<endl;
+    cout<<b<<endl;
+    cout<<c<<endl;
     return 0;
 }
