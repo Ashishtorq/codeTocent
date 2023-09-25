@@ -10,7 +10,7 @@ int main()
    for(int i=0; ch[i]!='\0'; i++){
        count++;
    }
-   cout<<"Length of char is : "<<count<<endl;
+   cout<<"Length of char is  "<<count<<endl;
    
     return 0;
 }
