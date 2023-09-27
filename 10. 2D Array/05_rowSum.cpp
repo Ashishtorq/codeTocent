@@ -1,4 +1,4 @@
- #include<iostream>
+#include<iostream>
 using namespace std;
 
 int main()
@@ -14,7 +14,6 @@ int main()
         for(int j=0; j<4; j++){
             rowSum+=arr[i][j];
         }
-        cout<<rowSum<<endl;
         rowSum = 0;
         cout<<endl;
     }
