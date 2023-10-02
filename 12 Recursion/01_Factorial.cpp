@@ -8,6 +8,7 @@ int fact(int n)
     {
         f = f * i;
     }
+    
     return f;
 }
 
