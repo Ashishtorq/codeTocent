@@ -3,13 +3,10 @@ using namespace std;
 
 int fact(int n)
 {
-    int f = 1;
-    for (int i = n; i >= 1; i--)
-    {
-        f = f * i;
-    }
-    
-    return f;
+    if(n==1) return 1;
+    int smallProblem = fact(n-1);
+    int bigProblem = n * smallProblem;
+    return bigProblem;
 }
 
 int main()
