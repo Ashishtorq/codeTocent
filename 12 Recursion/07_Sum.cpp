@@ -8,7 +8,7 @@ int sum(int arr[],int n){
 }
 int main()
 {
-    int arr[5] = {1,2,3,4,5};
+    int arr[5] = {1,2,3,4,10};
     cout<<"Ans : "<<sum(arr,5);
     return 0;
 }
