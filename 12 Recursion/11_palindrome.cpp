@@ -11,7 +11,7 @@ bool palindrome(string &s, int i, int j)
     else;
     i++, j--;
     return palindrome(s, i, j);
-    // return ans;
+    
 }
 
 int main()
