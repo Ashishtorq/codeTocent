@@ -6,10 +6,10 @@ bool binary(int arr[],int s, int e,int x){
     if(s>e) return false;
     if(arr[mid]==x) return true;
     else if(arr[mid]>x){
-        binary()
+        binary(arr,s,mid-1,x);
     }
-    else{
-        binary()
+    else if (arr[mid]<x){
+        binary(arr, mid+1, e, x);
     }
 }
 
@@ -18,7 +18,9 @@ int main()
     int arr[6] = {2,3,6,8,10,12};
     int s = arr[0];
     int e = arr[5];
-    int s = 10;
-    binary(arr,s,e,x);
+    int x = 11;
+    int ans = binary(arr,s,e,x);
+    if(ans) cout<<"Element is present"<<endl;
+    else cout<<"not found"<<endl;
     return 0;
 }
