@@ -38,12 +38,12 @@ void merge(int *arr, int s, int e)
         {
             arr[mainArrayIndex++] = first[index1++];
         }
-        else
+        else if(second[index2] > first[index1])
         {
             arr[mainArrayIndex++] = second[index2++];
         }
     }
-
+    
     while (index1 < len1)
     {
         arr[mainArrayIndex++] = first[index1++];
