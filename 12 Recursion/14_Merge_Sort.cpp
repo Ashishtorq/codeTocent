@@ -10,19 +10,21 @@ void merge(int *arr, int s, int e)
     int len2 = e - mid;
 
     int *first = new int[len1];
-    int *second = new int[len2];
+    int *second = new int [len2]; 
 
     // copy values
     int mainArrayIndex = s;
     for (int i = 0; i < len1; i++)
     {
-        first[i] = arr[mainArrayIndex++];
+        first[i] = arr[mainArrayIndex];
+        mainArrayIndex++;
     }
 
     mainArrayIndex = mid + 1;
     for (int i = 0; i < len2; i++)
     {
-        second[i] = arr[mainArrayIndex++];
+        second[i] = arr[mainArrayIndex];
+        mainArrayIndex++;
     }
 
     // merge 2 sorted arrays
