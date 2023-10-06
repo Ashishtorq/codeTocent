@@ -1,14 +1,16 @@
 #include<iostream>
 using namespace std;
-
+void mergeSort(int *arr, int s, int e){
+        
+}
 
 void merge(int *arr, int s, int e){
     if(s>e) return;
     int mid = (s+e)/2;
     // left side of array
-    merge(arr,s,mid);
+    mergeSort(arr,s,mid);
     // right side of an array
-    merge(arr,mid+1,e);
+    mergeSort(arr,mid+1,e);
     
     merge(arr,s,e);
 }
