@@ -20,6 +20,6 @@ int main()
     cin>>b;
 
     int ans = power(a,b);
-    cout<<"Ans - "<<ans;
+    cout<<"Ans -> "<<ans;
     return 0;
 }
