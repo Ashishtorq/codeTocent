@@ -1,8 +1,8 @@
 #include<iostream>
 using namespace std;
-void f(int i, int n){
-    if(i<1)return;
-    f(i-1,n);
+void f(int i, int n, int x){
+    if(i>x)return;
+    f(i+1,n);
     cout<<i<<" ";
 }
 int main()
@@ -10,6 +10,9 @@ int main()
     int n;
     cout<<"Enter the value of n"<<endl;
     cin>>n;
-    f(n,n);
+    int x;
+    cout<<"Enter the value of x"<<endl;
+    cin>>x;
+    f(n,n,x);
     return 0;
 }
