@@ -2,7 +2,7 @@
 using namespace std;
 void f(int i, int n, int x){
     if(i>x)return;
-    f(i+1,n);
+    f(i+1,n,x);
     cout<<i<<" ";
 }
 int main()
