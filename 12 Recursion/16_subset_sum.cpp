@@ -15,6 +15,7 @@ void helper(int arr[],int n, vector<int>temp, int index, int s, int sum){
     temp.push_back(arr[index]); 
     s = s + arr[index];
     helper(arr, n, temp, index+1, s, sum);
+    // if(helper == true) return;
     // not pick
     temp.pop_back();
     s  = s - arr[index];
@@ -22,8 +23,8 @@ void helper(int arr[],int n, vector<int>temp, int index, int s, int sum){
 }
 int main()
 {
-    int arr[] = {1,2,1};
-    int sum = 2;
+    int arr[] = {1,2};
+    int sum = 3 ;
     int n = 3;
     vector<int>temp;
     helper(arr,n,temp,0,0,sum);
