@@ -1,11 +1,11 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-bool flag = true;
+//bool flag = true;
 void helper(int arr[],int n, vector<int>temp, int index, int s, int sum){
     if(index==n){
-        if(s==sum && flag==true){
-            flag = false;
+        if(s==sum){
+           // flag = false;
             for(auto x:temp) cout<<x;
             cout<<endl;
         }
