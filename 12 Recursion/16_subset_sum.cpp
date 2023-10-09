@@ -26,7 +26,6 @@ bool helper(int arr[], int n, vector<int> temp, int index, int s, int sum)
     temp.pop_back();
     s = s - arr[index];
     helper(arr, n, temp, index + 1, s, sum);
-    helper(arr, n, temp, index + 1, s, sum);
     if (helper(arr, n, temp, index + 1, s, sum) == true)
         return true;
     return false;
