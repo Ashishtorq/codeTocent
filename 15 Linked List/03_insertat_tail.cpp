@@ -28,7 +28,7 @@ void print(node* &head){
 void insertAtTail(node* &tail, int data){
     node*temp = new node(data);
     tail->next = temp;
-    tail= tail->next;
+    tail= temp;  // or tail = tail->next;
 }
 int main()
 {
