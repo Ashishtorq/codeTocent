@@ -49,7 +49,7 @@ int main()
      print(head);
      insertAtTail(tail,12);
      print(head);
-     insertAtmiddle(head,3,22);
+     insertAtmiddle(head,4,22);
      print(head);
      return 0;
 }
