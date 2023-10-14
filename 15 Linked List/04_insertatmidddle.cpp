@@ -30,6 +30,10 @@ void insertAtTail(node *&tail, int data)
     tail = temp; // or tail = tail->next;
 }
 void insertAtmiddle(node* &head, int position, int data){
+    if(position==1){
+        insertAtHead(head,data);
+        return;
+    }
     node*temp = head;
     int count = 1;
     while(count< position - 1){
@@ -49,7 +53,7 @@ int main()
      print(head);
      insertAtTail(tail,12);
      print(head);
-     insertAtmiddle(head,4,22);
+     insertAtmiddle(head,1,22);
      print(head);
      return 0;
 }
