@@ -15,7 +15,7 @@ void print(node* &head){
         cout<<temp->data<<"->";
         temp = temp->next;
     }
-    cout<<"null"<<endl;
+    cout<<"Null"<<endl;
 }
 void insertAtHead(node *&head, int data)
 {
