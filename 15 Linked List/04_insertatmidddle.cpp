@@ -27,7 +27,7 @@ void insertAtTail(node *&tail, int data)
 {
     node *temp = new node(data);
     tail->next = temp;
-    tail = temp; // or tail = tail->next;
+    tail = temp; // or tail = tail->next
 }
 void insertAtmiddle(node* &head, int position, int data){
     if(position==1){
