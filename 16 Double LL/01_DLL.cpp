@@ -21,7 +21,7 @@ void print(node *head)
         cout << temp->data << "->";
         temp = temp->next;
     }
-    cout << endl;
+    cout << "NULL";
 }
 int len(node *head)
 {
@@ -34,10 +34,27 @@ int len(node *head)
     }
     return len;
 }
+void insertAthead(node* &head, int data){
+    node* temp = new node(data);
+    temp->next = head;
+    head->prev = temp;
+    head = temp;
+} 
+void insertAttail(node* &tail, int data){
+    node* temp = new node(data);
+    tail->next = temp;
+    temp -> prev = tail;
+    tail = temp;
+}
 int main()
 {
-    node *head = new node(10);
+    node *head = new node(2);
+    node* tail = head;
+    insertAthead(head,0);
+    insertAthead(head,1);
     print(head);
-    cout << len(head);
+    cout<<"lenght of list : " << len(head)<<endl;
+    insertAttail(tail,10);
+    print(head);
     return 0;
 }
