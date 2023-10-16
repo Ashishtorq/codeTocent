@@ -12,13 +12,13 @@ public:
         this->next = nullptr;
     }
     // destructor
-    ~node(){
-        int value = this->data;
-        if(this->next != nullptr){
-            delete next;
-            this -> next = nullptr;
-        }
-    }
+    // ~node(){
+    //     int value = this->data;
+    //     if(this->next != nullptr){
+    //         delete next;
+    //         this -> next = nullptr;
+    //     }
+    // }
 };
 void insertAtHead(node *&head, int data)
 {
@@ -82,7 +82,22 @@ void print(node *&head)
 //     }
 // }
     void deletenode(node *head, int position){
-        node* curr = head;
+        if(position == 1){
+            node*temp = head;
+            head = head->next;
+            delete temp;
+        }
+        else{
+            node *prev = head;
+            node *curr = nullptr;
+            int cnt = 1;
+            while (cnt <= position)
+            {
+            prev = prev->next;
+            cnt++;
+            }
+            delete curr;
+        }
     }
 
     int main()
