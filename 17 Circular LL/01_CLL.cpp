@@ -11,9 +11,10 @@ class node{
 };
 void print(node* &tail){
     node *temp = tail;
-    while(temp!=nullptr){
-        cout<<temp->data<<"->";
-        temp = temp->next;
+    cout<<tail->data<<"->";
+    while(tail->next != temp){
+        cout<<tail->data<<"->";
+        tail = tail->next;
     }
     cout<<"NULL";
     cout<<endl;
@@ -41,6 +42,8 @@ int main()
 {
     node*tail = nullptr;
     insert(tail,5,3);
+    insert(tail,3,5);
+    insert(tail,5,10);
     print(tail);
     return 0;
 }
