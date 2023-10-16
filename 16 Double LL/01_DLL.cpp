@@ -22,6 +22,7 @@ void print(node *head)
         temp = temp->next;
     }
     cout << "NULL";
+    cout<<endl;
 }
 int len(node *head)
 {
@@ -46,6 +47,19 @@ void insertAttail(node* &tail, int data){
     temp -> prev = tail;
     tail = temp;
 }
+void insertAtanyPOS(node* &head, int position, int data){
+    node* temp = head;
+    int cnt = 1;
+    while(cnt < position-1){
+        temp = temp -> next;
+        cnt++;
+    }
+    node*newnode = new node(data);
+    newnode->next = temp -> next;
+    temp->next->prev = newnode;
+    newnode->prev = temp;
+    temp ->next = newnode;
+}
 int main()
 {
     node *head = new node(2);
@@ -56,5 +70,7 @@ int main()
     cout<<"lenght of list : " << len(head)<<endl;
     insertAttail(tail,10);
     print(head);
-    return 0;
+    insertAtanyPOS(head,3,100);
+    print(head);
+     return 0;
 }
