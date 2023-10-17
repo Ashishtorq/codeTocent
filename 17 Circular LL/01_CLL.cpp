@@ -9,6 +9,7 @@ class node{
         this -> next = nullptr;
     }
 };
+// in circular ll we use tail to access whole list
 void print(node* &tail){
     node *temp = tail;
     cout<<tail->data<<"->";
