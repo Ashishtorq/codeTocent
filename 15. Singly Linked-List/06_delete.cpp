@@ -11,14 +11,6 @@ public:
         this->data = data;
         this->next = nullptr;
     }
-    // destructor
-    // ~node(){
-    //     int value = this->data;
-    //     if(this->next != nullptr){
-    //         delete next;
-    //         this -> next = nullptr;
-    //     }
-    // }
 };
 void insertAtHead(node *&head, int data)
 {
