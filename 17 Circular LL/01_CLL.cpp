@@ -12,7 +12,7 @@ class node{
 // in circular ll we use tail to access whole list
 void print(node* &tail){
     node *temp = tail;
-    cout<<tail->data<<"->";
+    // cout<<tail->data<<"->";
     while(tail->next != temp){
         cout<<tail->data<<"->";
         tail = tail->next;
@@ -25,7 +25,7 @@ void insert(node* &tail, int element, int data){
     if(tail == nullptr){
         node* newnode = new node(data);
         tail = newnode;
-        newnode ->next = newnode;
+        newnode ->next = newnode; // circular
     }
     // non-empty list.(assuming element is present)
     else{
