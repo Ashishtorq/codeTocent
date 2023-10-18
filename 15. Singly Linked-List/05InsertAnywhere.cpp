@@ -21,6 +21,7 @@ void insertAttail(node* &tail, int data){
 
 }
 void insertatAnywhere(node* &tail, node* &head, int position, int data){
+    // insert at head
     if(position == 1){
         insertAtHead(head,data);
     }
@@ -30,9 +31,11 @@ void insertatAnywhere(node* &tail, node* &head, int position, int data){
         temp = temp -> next;
         cnt++;
     }
+    // insert at tail
     if(temp -> next == nullptr){
         insertAttail(tail,data);
     }
+    // insert at middle
     node* insertmiddle = new node(data);
     insertmiddle->next = temp->next;
     temp->next = insertmiddle;
