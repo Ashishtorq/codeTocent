@@ -55,6 +55,7 @@ void print(node *&head)
     }
     cout << "->NULL" << endl;
 }
+// deleting the node
 // void deletenode(node *head, int position){
 //     if(position == 1){
 //         node*temp = head;
