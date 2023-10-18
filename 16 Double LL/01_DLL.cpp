@@ -4,7 +4,8 @@ class node
 {
 public:
     int data;
-    node *next;
+    node *next;  // next pointer
+   // node *next;  // previous pointer
     node *prev;
     node(int data)
     {
