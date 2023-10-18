@@ -8,7 +8,7 @@ int power(int n)
         return 1;
     // int smallProblem = power(n-1);
     // int bigProblem = 2 * smallProblem;
-    return 2 * power(n - 1);
+    return 2 * power(n-1);
 }
 
 int main()
@@ -16,6 +16,9 @@ int main()
     int n;
     cout << "Enter value of n" << endl;
     cin >> n;
+    // int a;
+    // cout<<"Enter the value of a"<<endl;
+    // cin>>a;
     int ans = power(n);
     cout << "Ans : " << ans;
     return 0;
