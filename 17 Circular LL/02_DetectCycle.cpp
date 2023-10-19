@@ -1,4 +1,5 @@
 #include<iostream>
+#include<map>
 using namespace std;
 class node{
     public:
@@ -10,12 +11,32 @@ class node{
         this-> next = nullptr;
     }
 };
+bool detectloop(node* head){
+    if(head==nullptr){
+        return false;
+    }
+    map<node*,bool>mp;
+    node*temp = head;
+    while(temp != nullptr){
+        if(mp[temp] == true) return true;
+        else{
+            mp[temp] = true;
+            temp = temp -> next;
+        }
+    }
+    return false;
+}
 int main()
 {
     node *head = new node(2);
-    head->next = new node(3);
+    head->next = new node(10);
     head->next->next = new node(5);
     head->next->next->next = new node(7);
-    head->next->next->next->next = new node(8);
+    head->next->next->next->next = new node(3);
+    if(detectloop(head)){
+        cout<<"loop"<<endl;
+    }
+    else cout<<"no loop"<<endl;
+    
     return 0;
 }
