@@ -14,7 +14,7 @@ bool floydDetect(node* head){
         return false;
     }
     node* slow = head;
-    node* fast = head -> next;
+    node* fast = head;
     while(fast != nullptr){
         fast = fast->next;
         if(fast!= nullptr){
@@ -22,6 +22,7 @@ bool floydDetect(node* head){
         }
         slow = slow -> next;
         if(slow == fast){
+            cout<<"Cycle present at -> "<<slow->data<<endl;
             return true;
         }
     }
@@ -32,8 +33,8 @@ int main()
     node *head = new node(2);
     head->next = new node(10);
     head->next->next = new node(5);
-    head->next->next->next = new node(7);
-    head->next->next->next->next = new node(3);
+    head->next->next->next = new node(10);
+    head->next->next->next->next = new node(5);
 
     if (floydDetect(head)) cout<<"loop"<<endl;
     else cout<<"no loop";
