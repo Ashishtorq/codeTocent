@@ -51,10 +51,10 @@ node* startPoint(node* head){
 }
 int main()
 {
-    node *head = new node(10);
+    node *head = new node(2);
     head->next = new node(12);
-    head->next->next = new node(15);
-    head->next->next->next = new node(23);
+    head->next->next = new node(5);
+    head->next->next->next = new node(10);
     head->next->next->next->next = head->next;
 
     if (floydDetect(head))
