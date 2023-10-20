@@ -11,11 +11,11 @@ public:
         this->next = NULL;
     }
 };
-bool floydDetect(node *head)
+node* floydDetect(node *head)
 {
     if (head == nullptr)
     {
-        return false;
+        return NULL;
     }
     node *slow = head;
     node *fast = head;
@@ -30,22 +30,38 @@ bool floydDetect(node *head)
         if (slow == fast)
         {
             cout << "Cycle present at -> " << slow->data << endl;
-            return true;
+            return slow;
         }
     }
-    return false;
+    return NULL;
+}
+node* startPoint(node* head){
+    if(head == NULL){
+        return NULL;
+    }
+    node* intersect = floydDetect(head);
+    if (intersect == NULL)
+        return NULL;
+    node* slow = head;
+    while(slow != intersect){
+        slow = slow -> next;
+        intersect = intersect ->next;
+    }
+    return slow;
 }
 int main()
 {
-    node *head = new node(2);
-    head->next = new node(10);
-    head->next->next = new node(5);
-    head->next->next->next = new node(10);
-    head->next->next->next->next = new node(5);
+    node *head = new node(10);
+    head->next = new node(12);
+    head->next->next = new node(15);
+    head->next->next->next = new node(23);
+    head->next->next->next->next = head->next;
 
     if (floydDetect(head))
         cout << "loop" << endl;
     else
         cout << "no loop";
+        node* loop = startPoint(head);
+        cout<<"Starting point of loop is at : "<<loop->data<<endl;
     return 0;
 }
