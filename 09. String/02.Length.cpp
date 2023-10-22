@@ -11,6 +11,6 @@ int main()
        count++;
    }
    cout<<"Length of char is  "<<count<<endl;
-   
+   // count
     return 0;
 }
