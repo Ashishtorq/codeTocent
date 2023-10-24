@@ -11,6 +11,7 @@ public:
         this->next = NULL;
     }
 };
+// used to detect the cycle
 node *floydDetect(node *head)
 {
     if (head == nullptr)
