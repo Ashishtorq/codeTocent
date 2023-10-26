@@ -14,6 +14,7 @@ public:
         this->prev = nullptr;
     }
 };
+// printing the value
 void print(node *head)
 {
     node *temp = head;
