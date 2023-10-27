@@ -1,5 +1,4 @@
 #include <iostream>
-// #include<stack>
 using namespace std;
 class stack
 {
@@ -41,7 +40,8 @@ public:
     {
         if (top >= 0 and top < size)
         {
-            return top;
+            int t = arr[top];
+            return t;
         }
         else
         {
@@ -56,7 +56,7 @@ public:
             cout << arr[i] << " ";
         cout << endl;
     }
-    bool isEmpty(int top)
+    bool isEmpty()
     {
         if (top == -1)
             return 0;
@@ -70,8 +70,11 @@ int main()
     st.push(1);
     st.push(2);
     st.push(3);
+    st.push(4);
+    st.push(5);
     cout<<"Top value of Stack : "<<st.peek()<<endl;
     st.pop();
-
+    cout<<st.isEmpty()<<endl;
+    cout<<st.peek()<<endl;
     return 0;
 }
