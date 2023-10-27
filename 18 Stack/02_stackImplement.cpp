@@ -49,6 +49,13 @@ public:
             cout << "stack is empty" << endl;
         }
     }
+    bool isEmpty()
+    {
+        if (top == -1)
+            return 0;
+        else
+            return 1;
+    }
     void print()
     {
         if (top < 0)
@@ -56,13 +63,6 @@ public:
         for (int i = 0; i <= top; i++)
             cout << arr[i] << " ";
         cout << endl;
-    }
-    bool isEmpty()
-    {
-        if (top == -1)
-            return 0;
-        else
-            return 0;
     }
 };
 int main()

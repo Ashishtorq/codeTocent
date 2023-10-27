@@ -31,14 +31,41 @@ class stack{
         }
         else cout<<"stack is empty"<<endl;
     }
+    bool isEmpty(){
+        if(top == -1) return true;
+        else return false;
+    }
+    void print(){
+        if(top == -1) return;
+        for(int i=0; i<=top; i++){
+            cout<<arr[i]<<" ";
+        }
+        cout<<endl;
+    }
 };
 int main()
 {
-    stack st(3);
+    // stack st(3);
+    // st.push(1);
+    // st.push(2);
+    // // st.push(3);
+    // // st.pop();
+    // st.print();
+    // cout<<"print top element"<<endl;
+    // st.peek();
+    // cout<<"print empty or not"<<endl;
+    // cout<<st.isEmpty();
+    // cout<<"print all elemetn"<<endl;
+    stack st(5);
     st.push(1);
     st.push(2);
     st.push(3);
-    st.pop();
-    st.peek();
+    st.push(4);
+    st.push(5);
+    // cout << "Top value of Stack : " << st.peek() << endl;
+    // st.pop();
+    cout << st.isEmpty() << endl;
+    // cout << st.peek() << endl;
+    st.print();
     return 0;
 }
