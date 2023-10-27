@@ -73,8 +73,9 @@ int main()
     st.push(4);
     st.push(5);
     cout<<"Top value of Stack : "<<st.peek()<<endl;
-    st.pop();
+    // st.pop();
     cout<<st.isEmpty()<<endl;
     cout<<st.peek()<<endl;
+    st.print();
     return 0;
 }
