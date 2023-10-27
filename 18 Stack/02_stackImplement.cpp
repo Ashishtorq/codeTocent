@@ -51,7 +51,7 @@ public:
     }
     void print()
     {
-        if (top == -1)
+        if (top < 0)
             return;
         for (int i = 0; i <= top; i++)
             cout << arr[i] << " ";
