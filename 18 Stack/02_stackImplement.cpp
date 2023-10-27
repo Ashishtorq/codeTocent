@@ -68,10 +68,10 @@ int main()
 {
     stack st(5);
     st.push(1);
-    st.push(1);
-    st.push(1);
-
-    st.print();
+    st.push(2);
+    st.push(3);
+    cout<<"Top value of Stack : "<<st.peek()<<endl;
+    st.pop();
 
     return 0;
 }
