@@ -25,6 +25,7 @@ public:
             cout << "Stack Overflow" << endl;
         }
     }
+    // element are filled in stack/array till top
     void pop()
     {
         if (top >= 0)
