@@ -3,7 +3,7 @@ using namespace std;
 class stack{
     public:
     int size;
-    int *arr;
+    int *arr; // initilised in heap memory
     int top;
 
     stack(int size){
