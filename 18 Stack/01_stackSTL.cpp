@@ -12,7 +12,7 @@ int main()
     cout<<s.top()<<endl;
     // check empty or not
     cout<<s.empty()<<endl;
-    // check the size
+    // check the size of stack
     cout<<s.size();
     return 0;
 }

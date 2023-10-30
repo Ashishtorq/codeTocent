@@ -3,6 +3,7 @@
 using namespace std;
 
 int main()
+// first empty the sting and push it to stack
 {
     string s = "abcde";
     stack<char>st;
