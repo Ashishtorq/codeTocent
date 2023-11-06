@@ -7,7 +7,7 @@ class Hero{
 };
 int main()
 {
-    Hero h;
+    Hero h; 
     cout<<sizeof(h)<<endl;
     cout<<"helth"<<h.health<<endl;
     cout<<"level"<<h.level<<endl;
