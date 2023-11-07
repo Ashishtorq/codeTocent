@@ -7,7 +7,7 @@ int main()
     // int num = 5;
     // int *ptr = &num;
     // cout << &num << endl;
-    // cout << *ptr << endl;
+    // cout << *ptr << endl
     // (*ptr)++;
     // cout << *ptr << endl;
     int n = 5;
