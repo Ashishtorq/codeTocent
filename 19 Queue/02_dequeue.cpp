@@ -28,7 +28,7 @@ ListNode* rev(ListNode* head, ListNode* back){
         prev = curr;
         curr = far;
     }
-    return prev;
+    return prev;.
 }
 public:
     ListNode* reverseBetween(ListNode* head, int left, int right) {
