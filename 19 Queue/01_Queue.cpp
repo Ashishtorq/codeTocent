@@ -14,7 +14,6 @@ int main()
     cout<<q.size()<<endl;
     if(q.empty()) cout<<"Empty"<<endl;
     else cout<<"not empty"<<endl;
-    cout<<q.front();
-    // cout<<q.rear()-1;
+    cout<<q.front()
     return 0;
 }
