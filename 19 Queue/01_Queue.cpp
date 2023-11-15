@@ -15,5 +15,5 @@ int main()
     if(q.empty()) cout<<"Empty"<<endl;
     else cout<<"not empty"<<endl;
     cout<<q.front()
-    return 0;
+    return 0
 }
