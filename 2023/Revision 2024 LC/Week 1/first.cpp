@@ -5,9 +5,13 @@ using namespace std;
         int ans = a + b;
         return ans;
     }
+    void func(){
+        cout<<"ashish";
+    }
 int main()
 {
 
-    cout<<Sum(10,15);
+    cout<<Sum(10,15)<<endl;
+    func();
     return 0;
 }
